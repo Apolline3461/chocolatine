@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: find
       run: |
         line=$(find -lname "#*, *#, *~, *.a, *.o, *.so, *.gcno, *.gcda, *.gcov, pain_au_chocolat")
         echo "Unwanted file detected:$line"
