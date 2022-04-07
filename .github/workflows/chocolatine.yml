@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       run: |
-      line=$(find -lname "#*, *#, *~, *.a, *.o, *.so, *.gcno, *.gcda, *.gcov, pain_au_chocolat")
-      echo "Unwanted file detected:$line"
-      exit 1
+        line=$(find -lname "#*, *#, *~, *.a, *.o, *.so, *.gcno, *.gcda, *.gcov, pain_au_chocolat")
+        echo "Unwanted file detected:$line"
+        exit 1
