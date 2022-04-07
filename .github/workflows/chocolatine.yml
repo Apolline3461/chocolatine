@@ -12,5 +12,6 @@ jobs:
         file=$(find -lname "#*, *#, *~, *.a, *.o, *.so, *.gcno, *.gcda, *.gcov, pain_au_chocolat")
         dir=$(find -type d -name "tmp")
         if [ $file -gt 0] && [ $dir -gt 0]; then
+          echo"::error::Unwanted files detected: $line"
           exit 1
         fi
