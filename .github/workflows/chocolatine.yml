@@ -1,0 +1,11 @@
+name : Mirroring
+
+on: [push]
+
+jobs:
+  check_repository_cleanliness:
+    runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        with:
+          files: "#*, *#, *~, *.a, *.o, *.so, *.gcno, *.gcda, *.gcov"
