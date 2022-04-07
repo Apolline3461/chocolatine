@@ -11,6 +11,6 @@ jobs:
       run: |
         file=$(find -lname "#*, *#, *~, *.a, *.o, *.so, *.gcno, *.gcda, *.gcov, pain_au_chocolat")
         dir=$(find -dname "tmp")
-        if [ $file -gt 0] || [ $dir -gt 0]; then
+        if [ $file -gt 0] && [ $dir -gt 0]; then
           exit 1
         fi
